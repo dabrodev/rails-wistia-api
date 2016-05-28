@@ -1,2 +1,26 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<h3>Contact</h3>
+
+<div class="card z-depth-3">
+	<div class="card-content">
+		<div id="map"></div>
+	</div>
+</div>
+
+<style>
+#map {
+	width: 500px;
+	height: 400px;
+}
+</style>
+
+<script>
+	function initMap() {
+	var mapDiv = document.getElementById('map');
+	var map = new google.maps.Map(mapDiv, {
+	  center: {lat: 44.540, lng: -78.546},
+	  zoom: 8
+});
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+async defer></script>
